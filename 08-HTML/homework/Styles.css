@@ -19,7 +19,7 @@ body{
                 height: 600px;
                 width: 500px;
                 padding: 50px;
-                border: 8px groove blanchedalmond;
+                border: 8px groove rgba(73, 70, 66, 0.747);
             }
             
             #spanId {
