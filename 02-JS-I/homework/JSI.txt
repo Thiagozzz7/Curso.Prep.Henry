@@ -1,0 +1,11 @@
+	* Variables
+    las variables son elementos que sirven para guardar tipos de datos que pueden ser boleanos, strings o numeros.
+	* Strings
+    las strings son tipos de datos que se encuentran dentro de las asignaciones "" ó ''.
+	* Funciones (argumentos, `return`)
+    los argumentos son la parte de la funcion en donde se da la clausula o bajo que terminos correra o se ejecutara la informacion de una función.
+    El return da la posibilidad de terminar una funcion o ejecutar una funcion si se cumplen los argumentos de dicha funcion, y si es asi esta funcion termina con el return.
+	* Declaraciones `if`
+    las declaraciones if es una forma de configurar instrucciones que se cumpliran si se cumplen determinados argumentos o exigencias.
+	* Valores booleanos (`true`, `false`)
+    Los valores booleanos sirven para confirmar el valor de una funcion o asginar un valor a una variable.
