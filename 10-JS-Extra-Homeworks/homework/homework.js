@@ -41,7 +41,9 @@ function numberOfCharacters(string) {
   //en formato par clave-valor.
   //Ej: Recibe ---> "adsjfdsfsfjsdjfhacabcsbajda" || Devuelve ---> { a: 5, b: 2, c: 2, d: 4, f: 4, h:1, j: 4, s: 5 } 
   //Escribe tu código aquí
-  var obj = {}
+
+
+  /* var obj = {}
 
   for ( i=0; i<string.length; i++){
     if(!obj[string[i]]) {
@@ -50,7 +52,19 @@ function numberOfCharacters(string) {
       obj[string[i]]++
     }
   }
+  return obj; */
+
+  var obj = {}
+
+  for ( i=0; i<string.length; i++){
+    if(obj[string[i]] === undefined) {
+      obj[string[i]] = 1;
+    } else {
+      obj[string[i]]++
+    }
+  }
   return obj;
+
 }
 
 
@@ -59,6 +73,7 @@ function capToFront(s) {
   //al principio de la palabra.
   //Ejemplo: soyHENRY -> HENRYsoy
   //Escribe tu código aquí
+
 }
 
 
@@ -83,6 +98,34 @@ function deleteAbc(cadena){
   //Define una función que elimine las letras "a", "b" y "c" de la cadena dada 
   //y devuelva la versión modificada o la misma cadena, en caso de contener dichas letras.
   //Escribe tu código aquí
+
+  /* var arraySinA = arr.filter(letra => letra !== 'a') */
+
+  /* var arr = cadena.split('')
+
+  var arraySinA = arr.filter(function (letra){
+    return letra !== 'a'
+  })
+  var arraySinAB = arraySinA.filter(function (letra){
+    return letra !== 'b'
+  })
+  var arraySinABC = arraySinAB.filter(function (letra){
+    return letra !== 'c'
+  })
+
+  return arraySinABC.join('') */
+
+  const abc = ['a', 'b', 'c']
+  var arr = cadena.split('')
+
+  arr = arr
+  .filter(letra => !abc.includes(letra))
+  /* .filter(function (letra){
+    return !abc.includes(letra)
+  }) */
+  .join('')
+
+  return arr
 }
 
 
@@ -90,8 +133,8 @@ function sortArray(arr) {
   //La función recibe una matriz de strings. Ordena la matriz en orden creciente de longitudes de cadena
   //Ej: Recibe ---> ["You", "are", "beautiful", "looking"] || Devuelve ---> [“You", "are", "looking", "beautiful"]
   //Escribe tu código aquí
+  
 }
-
 
 function buscoInterseccion(arreglo1, arreglo2){
   //Existen dos arrays, cada uno con 5 números. A partir de ello, escribir una función que permita 
@@ -99,8 +142,15 @@ function buscoInterseccion(arreglo1, arreglo2){
   //Si no tienen elementos en común, retornar un arreglo vacío.
   //Aclaración: los arreglos no necesariamente tienen la misma longitud
   //Escribe tu código aquí  
+  var interseccion = [];
+  
+  arreglo1.forEach(function (number){
+    if(arreglo2.includes(number)){
+      interseccion.push(number)
+    }
+  })
+  return interseccion
 }
-
 
 
 // No modificar nada debajo de esta línea
